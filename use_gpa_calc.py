@@ -89,7 +89,6 @@ class gpa:
     def department(self, widget, value, a,b,c,d,e,f,g,h):     
         active = widget.get_active()
         if value == "CE" and active == True:
-            print "1"
             self.cr[1] = 20
             self.cr[2] = 20
             self.cr[3] = 18
@@ -99,7 +98,6 @@ class gpa:
             self.cr[7] = 18
             self.cr[8] = 12            
         elif value == "EE" and active == True:
-            print "2"
             self.cr[1] = 20
             self.cr[2] = 20
             self.cr[3] = 19
@@ -182,14 +180,12 @@ class gpa:
     def calculate(self, widget, widget1, widget2, value):
         active = widget.get_active()
         if value == 1 and active == True:
-            #print active, value
             widget1.show()
             widget2.hide()
             self.check_cgpa.set_active(False)
             self.label_cgpa.show()
             self.entry_cgpa.hide()
         elif value == 2 and active == True:
-            #print active, value
             widget2.show()
             widget1.hide()
             self.check_cgpa.set_active(True)
