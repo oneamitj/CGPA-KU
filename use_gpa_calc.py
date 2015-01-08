@@ -106,6 +106,15 @@ class gpa:
             self.cr[6] = 18
             self.cr[7] = 18
             self.cr[8] = 18
+        elif value == "CS" and active == True:
+            self.cr[1] = 20
+            self.cr[2] = 20
+            self.cr[3] = 18
+            self.cr[4] = 18
+            self.cr[5] = 20
+            self.cr[6] = 20
+            self.cr[7] = 15
+            self.cr[8] = 12
 
 
 
@@ -223,6 +232,12 @@ class gpa:
         self.dept_box.pack_start(self.dept, gtk.FALSE, gtk.FALSE, 0)
         self.dept.show()
         self.dept.set_active(True)
+        
+        self.dept = gtk.RadioButton(self.dept,"DoCS")
+        self.dept.connect("toggled", self.department, "CS", self.cr[1], self.cr[2], self.cr[3], self.cr[4], self.cr[5], self.cr[6], self.cr[7], self.cr[8])
+        self.dept_box.pack_start(self.dept, gtk.FALSE, gtk.FALSE, 0)
+        self.dept.show()
+       
 
 
         self.entry_sem1 = NumberEntry()
