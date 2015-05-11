@@ -5,6 +5,7 @@ calculate CGPA or know required GPA to obtain wished CGPA.
 Available departments:
 + Electrical Engineering (KUEE)
 + Computer Engineering (KUCE)*
++ Computer Engineering
 
 Available Methods:
 + CGPA
